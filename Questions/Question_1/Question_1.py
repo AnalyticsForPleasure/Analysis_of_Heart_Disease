@@ -47,9 +47,10 @@ if __name__ == '__main__':
         male_count = (filtered_df[filtered_df['Sex'] == 'Male'][condition] == 'Yes').sum()
         female_count = (filtered_df[filtered_df['Sex'] == 'Female'][condition] == 'Yes').sum()
         percentage_difference = abs((male_count - female_count) / ((male_count + female_count) / 2)) * 100  # Percentage difference calculation
-        result.loc[len(result)] = [condition, male_count, female_count,percentage_difference]
+        result.loc[len(result)] = [condition, male_count, female_count,f'{percentage_difference:.2f}%']
 
     print(result)
+    result.to_csv('/home/shay_diy/PycharmProjects/Analysis_of_Heart_Disease/Questions/Question_1/Male_VS_Female_absence_of_a_disease.csv', index=False)
 
     print('*')
 
