@@ -27,6 +27,8 @@ from pprint import pprint
     # Factor to be checked is a factor related to the presence or absence of a disease.
     # The factors are as follows. : Stroke, KidneyDisease, Diabetic, Asthma, SkinCancer
 
+
+
 if __name__ == '__main__':
     pd.set_option('display.max_rows', 5000)
     df = pd.read_csv('/home/shay_diy/PycharmProjects/Analysis_of_Heart_Disease/Data/heart_2020_cleaned.csv')
